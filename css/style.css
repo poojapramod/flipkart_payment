@@ -1,0 +1,27 @@
+* { 
+    margin:0;
+    padding:0;
+    border:0;
+    box-sizing:border-box;
+    outline:none;
+    -webkit-text-size-adjust:none;
+    -moz-text-size-adjust:none;
+    text-size-adjust:none;
+    font-family:Avenir-Light;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+ul, ol, li, h1, h2, h3, h4, h5, h6, a, p {
+    text-decoration:none;
+    list-style:none;
+}
+a,.transition,input[type="submit"],.overlay {
+    transition:all .5s;
+    -webkit-transition:all .5s;
+    -moz-transition:all .5s;
+}
+body {
+    width:100%;
+    overflow-x:hidden;
+}
