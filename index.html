@@ -12,14 +12,282 @@
 </head>
 <body>
     <section class="payment-container">
-        <div class="container-fluid">
+        <div class="container-fluid mt-5">
             <div class="row">
-                <div class="col-8">
-                    <div class="accordion"></div>
+                <div class="col-6">
+                    <div class="accordion">
+                        <div class="accordion-card">
+                        
+                            <div class="accordion-header">
+                                <label class="radio-wrap">
+                                    <p class="check-text"><img src="images/upiLogo.gif" class="mr-3" alt=""> UPI (PhonePe / Paytm / Google Pay)</p>
+                                    <input type="radio" id="upi" name="payment-system" value="upi">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="row accordion-body">
+                                <div class="col-12 pb-2">
+                                    <p class="option-title font-weight-bold">Choose an option</p>
+                                </div>
+                                <div class="col-12">
+                                    <div class="sub-accordion">
+                                        <div class="sub-accordion-header">
+                                            <label class="radio-wrap">
+                                                <p class="check-text">PhonePe</p>
+                                                <input type="radio" id="phonepe" name="upi-options" value="phonepe">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="sub-accordion-body">
+                                            <button class="btn btn-custom btn-orange text-uppercase">continue</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="sub-accordion">
+                                        <div class="sub-accordion-header">
+                                            <label class="radio-wrap">
+                                                <p class="check-text">Your UPI ID</p>
+                                                <input type="radio" id="upi-id" name="upi-options" value="upi-id">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="sub-accordion-body">
+                                            <div class="row">
+                                                <div class="col-8 d-flex align-items-center position-relative">
+                                                    <label for="form-upi-id" class="form-floating-placeholder">Enter UPI ID</label>
+                                                    <input class="form-control form-upi-id form-floating-control" id="form-upi-id" type="text">
+                                                    <a href="#" class="form-upi-verify link-button text-uppercase">Verify</a>
+                                                </div>
+                                                <div class="col-4">
+                                                    <button class="btn btn-custom btn-orange btn-orange-disable disabled text-uppercase">pay &#8377; 1,709</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-card">
+                            <div class="accordion-header">
+                                <label class="radio-wrap">
+                                    <p class="check-text"><img src="images/paytm.png" class="mr-3" alt=""> Wallets <span class="badge text-uppercase">New</span></p>
+                                    <input type="radio" id="wallet" name="payment-system" value="wallet">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="col-12">
+                                    <div class="sub-accordion">
+                                        <div class="sub-accordion-header">
+                                            <label class="radio-wrap">
+                                                <p class="check-text">Paytm</p>
+                                                <input type="radio" id="paytm" name="wallet-options" value="phonepe">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="sub-accordion-body">
+                                            <div class="row">
+                                                <div class="col-8 d-flex align-items-center position-relative">
+                                                    <label for="form-upi-id" class="form-floating-placeholder">Enter Paytm linked no.</label>
+                                                    <input class="form-control form-upi-id form-floating-control" id="form-upi-id" type="text">
+                                                    <a href="#" class="form-link-now link-button text-uppercase">Link Now</a>
+                                                </div>
+                                                <div class="col-4">
+                                                    <button class="btn btn-custom btn-orange btn-orange-disable disabled text-uppercase">continue</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="sub-accordion sub-accordion-disabled">
+                                        <div class="sub-accordion-header">
+                                            <label class="radio-wrap">
+                                                <p class="check-text">PhonePe</p>
+                                                <input type="radio" id="upi-id" name="wallet-options" value="upi-id">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                            <p>Coming soon.</p>
+                                        </div>
+                                        <div class="sub-accordion-body"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-card">
+                            <div class="accordion-header">
+                                <label class="radio-wrap">
+                                    <p class="check-text">Credit / Debit / ATM Card</p>
+                                    <input type="radio" id="card" name="payment-system" value="card">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="p-2">
+                                    <div class="row mb-3">
+                                        <div class="col-8">
+                                            <label for="form-card-number" class="form-floating-placeholder">Enter Card Number</label>
+                                            <input class="form-control form-floating-control" id="form-card-number" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <div class="d-flex align-items-center form-conatiner">
+                                               
+                                                <div class="col-6">
+                                                    <p>Valid thru</p>
+                                                </div>
+                                                <div class="col-3">
+                                                    <select class="select-control" name="" id="">
+                                                        <option value="MM">MM</option>
+                                                        <option value="01">01</option>
+                                                        <option value="02">02</option>
+                                                        <option value="03">03</option>
+                                                        <option value="04">04</option>
+                                                        <option value="05">05</option>
+                                                        <option value="06">06</option>
+                                                        <option value="07">07</option>
+                                                        <option value="08">08</option>
+                                                        <option value="09">09</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-3">
+                                                    <select class="select-control" name="" id="">
+                                                        <option value="YY">YY</option>
+                                                        <option value="21">21</option>
+                                                        <option value="22">22</option>
+                                                        <option value="23">23</option>
+                                                        <option value="24">24</option>
+                                                        <option value="25">25</option>
+                                                        <option value="26">26</option>
+                                                        <option value="27">27</option>
+                                                        <option value="28">28</option>
+                                                        <option value="29">29</option>
+                                                        <option value="30">30</option>
+                                                    </select>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <label for="form-cvv" class="form-floating-placeholder">CVV</label>
+                                            <input class="form-control form-floating-control" id="form-cvv" type="text">
+                                        </div>
+                                        <div class="col-4">
+                                            <button class="btn btn-custom btn-orange btn-orange-disable disabled text-uppercase">pay &#8377; 1,709</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-card">
+                            <div class="accordion-header">
+                                <label class="radio-wrap">
+                                    <p class="check-text">Net Banking</p>
+                                    <input type="radio" id="net-banking" name="payment-system" value="net-banking">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="p-2">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <select name="net-banking-options" id="net-banking-options" class="form-select-option w-100">
+                                                <option value="select">Select Bank</option>
+                                                <option value="HDFC_Bank">HDFC Bank</option>
+                                                <option value="ICIC_Bank">ICIC Bank</option>
+                                                <option value="SBI">State Bank Of India</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-6">
+                                            <button class="btn btn-custom btn-orange btn-orange-disable disabled text-uppercase">pay &#8377; 1,709</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-card">
+                            <div class="accordion-header">
+                                <label class="radio-wrap">
+                                    <p class="check-text">Cash on Delivery</p>
+                                    <input type="radio" id="cash-delivery" name="payment-system" value="cash-delivery">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="accordion-body">
+                                <div class="p-2">
+                                    
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <button class="btn btn-custom btn-orange text-uppercase">Confirm order</button>
+                                        </div>
+                                    </div>
+                                    <p class="pt-2 text-gray">Safety Tip: Avoid cash or card at delivery. Use any method above to pay now.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(function() {
+                paymnet_system();
+                upi_options();
+                wallet_options();
+                $("input[name='payment-system']").change(paymnet_system);
+                $("input[name='upi-options']").change(upi_options);
+                $("input[name='wallet-options']").change(wallet_options);
+            });
+            var paymnet_system = function() {
+                $(".accordion-card").removeClass("accordion-card-active");
+                    $(".accordion-body").slideUp();
+                    $(".accordion-body").removeClass('active');
+                if ($("input[name='payment-system']").is(':checked')) {
+                    $(this).parent().parent().parent().addClass("accordion-card-active");
+                    $(this).parent().parent().parent().find('.accordion-body').slideDown();
+                    $(this).parent().parent().parent().find('.accordion-body').addClass('active');
+                } 
+                
+            }
+            var upi_options = function() {
+                $(".sub-accordion-body").slideUp();
+                $(".sub-accordion-body").removeClass('active');
+                if ($("input[name='upi-options']").is(':checked')) {
+                    $(this).parent().parent().parent().find('.sub-accordion-body').slideDown();
+                    $(this).parent().parent().parent().find('.sub-accordion-body').addClass('active');
+                } 
+                
+            }
+            var wallet_options = function() {
+                $(".sub-accordion-body").slideUp();
+                $(".sub-accordion-body").removeClass('active');
+                if ($("input[name='wallet-options']").is(':checked')) {
+                    $(this).parent().parent().parent().find('.sub-accordion-body').slideDown();
+                    $(this).parent().parent().parent().find('.sub-accordion-body').addClass('active');
+                } 
+                
+            }
+            
+            $(".form-floating-control").focus(function () {
+                $(this).parent().addClass('form-floating-setfocus');
+            });
+            $(".form-floating-control").blur(function () {
+                if ($(this).val() == "") {
+                    $(this).parent().removeClass('form-floating-setfocus');
+                }
+            });
+        });
+       
+    </script>
 </body>
 </html>
